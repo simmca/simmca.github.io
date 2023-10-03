@@ -1,39 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clint Simmons Homepage</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clint Simmons Portfolio</title>
+    <script src="https://kit.fontawesome.com/07c3f3bd0a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-
-  <section id="left-panel">
-    <header>
-      <h1>Clint Simmons</h1>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="https://simmca.github.io/">Home</a></li>
-        <li><a href="https://simmca.github.io/about.html">About</a></li>
-        <li><a href="https://simmca.github.io/projects.html">Projects</a></li>
-      </ul>
-    </nav>
-    <footer>
-      <ul class="social-icons">
-        <li><a href="https://www.linkedin.com/in/clintasimmons/"><i class="fab fa-linkedin fa-3x"></i></a></li>
-        <li><a href="https://github.com/simmca"><i class="fab fa-github fa-3x"></i></a></li>
-        <li><a href="#"><i class="fab fa-behance fa-3x"></i></a></li>
-      </ul>
-    </footer>
-  </section>
-
-  <section id="right-panel">
-    <div id="message">
-        <p>Summary</p>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#">Portfolio</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Developer</p>
+                <h1>Clint Simmons</h1>
+            </div>
+        </div>
     </div>
-  </section>
+    <!---------------about--------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/headshot.jpg" alt="headshot">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>About me goes here</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Hobbies</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Language</span><br>Java</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2017-2023</span><br>Alarm Monitoring Lead</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>April 2023-December 2023</span><br>Tech Elevator</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------skills--------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title card">Skills</h1>
+            <div class="services-list">
+                <div class="card">
+                    <i class="fa-brands fa-java"></i>
+                    <h2>Backend</h2>
+                    <p>Java, JUnit, IntelliJ, Spring Boot, REST API, JSON, SQL, PostgreSQL/PGAdmin, MySQL</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Frontend</h2>
+                    <p>HTML, CSS, JavaScript, Vue.js, Responsive Design</p>
+                </div>
+                <div class="card">
+                    <i class="fa-brands fa-github"></i>
+                    <h2>Other</h2>
+                    <p>Git, GitHub, GitLab, Windows OS</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------portfolio--------------->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Portfolio</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.jpg" alt="work-1">
+                    <div class="layer">
+                        <h3>devboard CRUD</h3>
+                        <p>Practice CRUD</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.jpg" alt="work-2">
+                    <div class="layer">
+                        <h3>HTML & CSS Reference</h3>
+                        <p>Reference site for HTML & CSS</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+    </div>
+    <a href="#" class="btn">See more</a>
+    </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
 
 </body>
+
 </html>
