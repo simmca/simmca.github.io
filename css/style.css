@@ -11,7 +11,7 @@ html {
 
 body {
     background: #080808;
-    color: #fff;
+    color: #eee;
 }
 
 .container {
@@ -31,7 +31,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #eee;
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -95,7 +95,7 @@ nav ul li a:hover::after {
 .sub-title {
     font-size: 60px;
     font-weight: 600;
-    color: #fff;
+    color: #eee;
 }
 
 .tab-titles {
@@ -188,7 +188,7 @@ nav ul li a:hover::after {
 .services-list div:hover {
     background-color: #07b19a;
     transform: scale(1.1);
-    color: #000;
+    color: #080808;
 }
 
 /*---------------portfolio---------------*/
@@ -247,7 +247,7 @@ nav ul li a:hover::after {
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
-    background: #fff;
+    background: #eee;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -270,7 +270,7 @@ nav ul li a:hover::after {
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color: #fff;
+    color: #eee;
     transition: background 0.5s;
 }
 
@@ -333,7 +333,7 @@ form textarea {
     background: #252525;
     padding: 15px;
     margin: 15px 0;
-    color: #fff;
+    color: #eee;
     font-size: 18px;
     border-radius: 6px;
 }
